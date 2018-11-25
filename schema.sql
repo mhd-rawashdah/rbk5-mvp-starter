@@ -1,14 +1,16 @@
-DROP DATABASE IF EXISTS test;
+DROP DATABASE IF EXISTS ChatApp;
 
-CREATE DATABASE test;
+CREATE DATABASE ChatApp;
 
-USE test;
+USE ChatApp;
 
-CREATE TABLE items (
+CREATE TABLE users (
   id int NOT NULL AUTO_INCREMENT,
-  quantity integer NOT NULL,
-  description varchar(50) NOT NULL,
-  PRIMARY KEY (ID)
+  username varchar(50) NOT NULL,
+  email varchar(70) NOT NULL,
+  password varchar(50) NOT NULL,
+  registerDate Date,
+  PRIMARY KEY (id)
 );
 
 

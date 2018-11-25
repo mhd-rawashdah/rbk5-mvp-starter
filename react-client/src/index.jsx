@@ -31,17 +31,24 @@ class  App extends React.Component {
   }
 
   render () {
-     const activeStyle = {fontSize:"30px", color:"red"};
-     const title = {marginBottom:"40px", marginTop:"30px"}
+     const activeStyle = {fontSize:"25px"};
+     const title = {marginBottom:"40px", marginTop:"30px", color:"#fff"}
+     const st = {padding:"10px", background:"#990033", color:"#fff"};
+     const btnSt = {color:"#fff"}
     return (
      <Router>
       <div>
-        <h1 style={title}>chat app</h1>
-         
-         <NavLink display={this.state.shown? "block": "none"}
-         activeStyle={activeStyle} exact  to="/">Sign Up</NavLink>
-         <NavLink display={this.state.shown? "block": "none"} 
-         activeStyle={activeStyle} to="/sign-in"> Sign In</NavLink>
+        <div style={st} className = "row"> 
+         <div className="col-md-8"> </div>
+         <div className="col-md-1">
+           <NavLink style={btnSt} className="btn" activeStyle={activeStyle} exact  to="/">Sign Up</NavLink>
+         </div>
+         <div className="col-md-2">
+           <NavLink style={btnSt} className="btn" activeStyle={activeStyle} to="/sign-in"> Sign In</NavLink>
+         </div>
+        </div>
+        <h1 style={title}>ChatApp</h1>
+
 
         <Route path="/" exact component={SignUpForm}/>
         <Route path="/sign-in" exact component={SignInForm}/>

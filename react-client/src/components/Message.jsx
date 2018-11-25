@@ -7,10 +7,10 @@ class Message extends React.Component {
 	}
   
 	render() {
-		const labelSt = {color:"blue" , fontWeight:"blod"}
+		const box = {minWidth: "-webkit-min-content", display: "flex", color:"blue" , fontWeight:"blod"}
 		return (
 			<div>
-			  <label style={labelSt}>@Mohammad</label>
+			  <label style={box}>{this.props.data.handle}</label>
 			  <p>{this.props.data.message}</p>
 			</div>
 
